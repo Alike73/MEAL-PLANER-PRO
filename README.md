@@ -6,7 +6,7 @@
 <img src="./src/Assets/folderIcon.png" alt="Recipe Radar Pro Logo" width="150">
 
 ## Technologies
-<img src="https://img.shields.io/badge/react-C08261?style=for-the-badge&logo=react&logoColor=4D2DB7"/> <img src="https://img.shields.io/badge/redux-FF9B50?style=for-the-badge&logo=redux&logoColor=4D2DB7"/> <img src="https://img.shields.io/badge/bootstrap-9A3B3B?style=for-the-badge&logo=bootstrap&logoColor=4D2DB7"/> <img src="https://img.shields.io/badge/css3-9F91CC?style=for-the-badge&logo=css3&logoColor=4D2DB7"/>
+<img src="https://img.shields.io/badge/react-6C757D?style=for-the-badge&logo=react&logoColor=4D2DB7"/> <img src="https://img.shields.io/badge/redux-FF9B50?style=for-the-badge&logo=redux&logoColor=4D2DB7"/> <img src="https://img.shields.io/badge/bootstrap-9A3B3B?style=for-the-badge&logo=bootstrap&logoColor=4D2DB7"/> <img src="https://img.shields.io/badge/css3-9F91CC?style=for-the-badge&logo=css3&logoColor=4D2DB7"/>
 
 This is a React application that allows users to create and manage meal plans. The application is built using the following technologies:
 
