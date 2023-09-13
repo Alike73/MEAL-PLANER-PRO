@@ -1,17 +1,15 @@
 
-
-
-const BreakfastMeal = () => {
+const BreakfastMeal = ({ mealForBreakfast, ingredientsForBreakfast }) => {
 
   return (
     <div className="breakfast_meal">
       <h6 className="m-0">For breakfast today is:</h6>
       <p className="text_one">
-        Breakfast meal...
+        { mealForBreakfast }
       </p>
-      <h6 className="m-0">Ingredients you need:</h6>
+      <h6 className="m-0">Breakfast ingredients you need:</h6>
       <p className="text_two">
-        Breakfast Ingredients...
+        { ingredientsForBreakfast }
       </p>
     </div>
   )

@@ -7,20 +7,16 @@ import { useSelector } from "react-redux";
 import { getActiveTab } from "../../Redux/MealSlice";
 
 
-
-const TabsMain = () => {
-
-  // const [activeTab, setActiveTab] = useState(0);
-  const activeTab = useSelector(getActiveTab);
+const TabsMain = ({ selectedDay, updateDay }) => {
   
+  const activeTab = useSelector(getActiveTab);
 
   return (
-
     <div className="tabs_main">
       <Tabs />
-      { activeTab === 0 && <BreakfastEditor />}
-      { activeTab === 1 && <LunchEditor />}
-      { activeTab === 2 && <DinnerEditor />}
+      { activeTab === 0 && <BreakfastEditor selectedDay = { selectedDay } updateDay = { updateDay } />}
+      { activeTab === 1 && <LunchEditor selectedDay = { selectedDay } updateDay = { updateDay } />}
+      { activeTab === 2 && <DinnerEditor selectedDay = { selectedDay } updateDay = { updateDay } />}
     </div>
   )
 }

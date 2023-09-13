@@ -1,6 +1,5 @@
 import TabItem from "./TabItem";
 
-
 const Tabs = () => {
 
   return (

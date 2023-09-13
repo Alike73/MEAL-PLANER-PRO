@@ -10,6 +10,20 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ---Main-Title-Style--- */
+h1 {
+  margin-bottom: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(28px, calc(var(--size)*6.7), 160px);
+  font-weight: 800;
+  background: var(--c-neon);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--text-shadow);
 }
 
 /* ---Add-Meal-Plan-Btn-Style--- */
@@ -21,6 +35,9 @@
   border-radius: 45px;
   border: none;
   background-color: rgb(180 27 28);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(.75rem, calc(var(--size) * 1.2), 1rem);
+  font-weight: 600;
   color: white;
   box-shadow: 0px 10px 10px 
               rgb(238 106 106) inset, 0px 5px 10px 
@@ -31,7 +48,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .Btn::before {
   width: 70%;
   height: 2px;
@@ -42,7 +58,6 @@
   top: 7px;
   border-radius: 50%;
 }
-
 .Btn::after {
   width: 70%;
   height: 2px;
@@ -53,11 +68,9 @@
   bottom: 7px;
   border-radius: 50%;
 }
-
 .Btn:hover {
   animation: jello-horizontal 0.9s both;
 }
-
 @keyframes jello-horizontal {
   0% {
     transform: scale3d(1, 1, 1);
@@ -88,7 +101,118 @@
   }
 }
 
+/* ---Image-Banner-Style--- */
+.meal_banner {
+  margin-top: 4rem;
+}
+.transform-border {
+  position: relative;
+  max-width: 100%;
+  margin: 50px auto;
+  transform: perspective(3000px) rotateY(29deg);
+}
+.transform-border img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--c-label);
+  border-radius: 1rem;
+  box-shadow: -12px 11px 1px var(--c-grey);
+}
+.transform-border:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -22px;
+  top: 22px;
+  background: var(--c-brown-sm);
+  border-radius: 1rem;
+  z-index: -1;
+}
+
 /* ---Editor-Style--- */
+.my_input {
+  display: block;
+  width: 100%;
+  background: linear-gradient(#333, #222);	
+  border: 1px solid #444;
+  border-radius: 2rem;
+  box-shadow: 0 2px 0 #000;
+  color: #888;
+  line-height: 3rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(14px, calc(var(--size) * 1.2), 20px);
+  font-weight: 400;
+  height: 40px;
+  padding: 1.5rem 2rem;
+  text-shadow: 0 -1px 0 #000;
+  transition: all .3s ease-in-out;
+}
+.my_input::-webkit-input-placeholder {
+  color: #888;
+}
+.my_input:-moz-placeholder {
+  color: #888;
+}
+.my_input:focus::-webkit-input-placeholder { 
+  color: #efe;
+}
+.my_input:focus:-moz-placeholder {
+  color: #efe;
+}
+.my_input:focus {
+  animation: glow 800ms ease-out infinite alternate;
+  background: #222922;
+  background: linear-gradient(#333933, #222922);
+  border-color: #393;
+  box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
+  color: #efe;
+  outline: none;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  background: linear-gradient(#333, #222);	
+  border: 1px solid #444;
+  border-radius: .5rem;
+  box-shadow: 0 2px 0 #000;
+  color: #888;
+  line-height: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(14px, calc(var(--size) * 1.2), 20px);
+  font-weight: 400;
+  padding: 1.5rem 2rem;
+  text-shadow: 0 -1px 0 #000;
+  transition: all .3s ease-in-out;
+}
+textarea::-webkit-input-placeholder {
+  color: #888;
+}
+textarea:-moz-placeholder {
+  color: #888;
+}
+textarea:focus::-webkit-input-placeholder { 
+  color: #efe;
+}
+textarea:focus:-moz-placeholder {
+  color: #efe;
+}
+textarea:focus {
+  animation: glow 800ms ease-out infinite alternate;
+  background: #222922;
+  background: linear-gradient(#333933, #222922);
+  border-color: #393;
+  box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
+  color: #efe;
+  outline: none;
+}
+
+/* ----------------------------------- */
+.meal_editor,
+.meal_banner {
+  margin-top: 4rem;
+}
 .tag-container {
   position: relative;
   margin: 55px auto 0;
@@ -97,53 +221,137 @@
 .tag-container:before {
   content: "";
   position: absolute;
-  top: -25px;
+  top: -35px;
   left: 25px;
   right: 25px;
-  height: 25px;
-  background: var(--c-white);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  height: 40px;
+  background: hsl(215deg 12.39% 28.65%);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 .tag-container:after {
   content: "";
   position: absolute;
   z-index: 5;
-  top: -35px;
+  top: -48px;
   left: calc(50% - 8px);
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background: var(--c-black);
-  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .3), 0 0 0 18px var(--c-white);
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .3), 0 0 0 30px hsl(215deg 12.39% 28.65%);
 }
 .tag-inner {
   padding: 20px 20px 40px;
   border-radius: 20px;
-  background: var(--c-white);
-  box-shadow: 0 3px 4px rgba(0, 0, 0, .1)
+  background: hsl(215deg 12.39% 28.65%);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.rounded-pill {
+  font-family: 'Poppins', sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: all .1s ease-in-out;
+}
+.rounded-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 /* ---Meal-Plan-List-Style--- */
-
 .card {
+  position: relative;
   border-radius: 1rem;
+  border: 1px solid var(--c-label);
+  background: var(--c-dark-sm);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.clickMe {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: rotate(-45deg);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--c-neon);
+  text-shadow: var(--text-shadow);
+}
+.hideClickMe {
+  display: none;
+}
+.tilt-in-bottom-1 {
+	-webkit-animation: tilt-in-bottom-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: tilt-in-bottom-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.text_one {
+@-webkit-keyframes tilt-in-bottom-1 {
+  0% {
+    -webkit-transform: rotateY(30deg) translateY(300px) skewY(-30deg);
+            transform: rotateY(30deg) translateY(300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+            transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt-in-bottom-1 {
+  0% {
+    -webkit-transform: rotateY(30deg) translateY(300px) skewY(-30deg);
+            transform: rotateY(30deg) translateY(300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+            transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+
+.selected {
+  border: 1px solid var(--c-neon);
+  background: var(--c-card-active-bg);
+}
+.default {
+  background-image: var(--card-default-bg);
+}
+.text_one,
+.text_two {
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(1rem, calc(var(--size) * 1.2), 1.25rem);
   text-align: start;
   word-wrap: break-word;
+  color: var(--c-text-light);
+  font-weight: 400;
 }
-.text_two {
-  font-size: clamp(.75rem, calc(var(--size) * 1.2), 1rem);
-  text-align: start;
-  word-wrap: break-word;
+label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, calc(var(--size) * 1.2), 1.25rem);
+  font-weight: bold;
+  color: var(--c-text-light);
 }
-
+.selectedTitle {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--c-label);
+  text-decoration: underline;
+}
+.defaultTitle {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--c-neon);
+  text-decoration: underline;
+}
+.defaultTitle span {
+  display: inline-block;
+  padding: .25rem .75rem;
+  background: var(--c-title-bg);
+  border-radius: .5rem;
+  border: 1px solid var(--c-text);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
 h6 {
-  color: var(--c-red-lg);
-  font-size: clamp(.75rem, calc(var(--size) * 1.2), 1rem);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--c-neon);
+  font-size: clamp(1rem, calc(var(--size) * 1.2), 1.25rem);
   text-align: start;
 }
 

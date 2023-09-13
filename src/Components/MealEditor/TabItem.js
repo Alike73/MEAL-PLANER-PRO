@@ -13,7 +13,7 @@ const TabItem = ({ tab, index }) => {
     <button 
       className={ isActive 
         ? 'btn btn-sm btn-danger rounded-pill px-3' 
-        : 'btn btn-sm btn-outline-secondary rounded-pill px-3'
+        : 'btn btn-sm btn-success rounded-pill px-3'
       } 
       type="button"
       value = { index } 

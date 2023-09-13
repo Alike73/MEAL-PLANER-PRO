@@ -1,0 +1,36 @@
+
+.circleOuter {
+    position: relative;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.bi-arrow-up-circle {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--c-red);
+}
+
+.circle-background,
+.circle-progress {
+    fill: none;
+}
+
+.circle-background {
+    stroke: var(--c-white);
+}
+
+.circle-progress {
+    stroke: var(--c-neon);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.circle-text {
+    font-size: 3em;
+    font-weight: bold;
+    fill: var(--c-neon);
+}

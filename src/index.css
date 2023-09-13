@@ -1,18 +1,35 @@
 @import "~normalize.css/normalize.css";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
-
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif; */
 
 :root {
   --size: calc(1vh + 1vw);
   --c-text: hsl(254, 7%, 35%);
   --c-label: hsl(249, 6%, 58%);
+  --c-text-light: hsl(249deg 2.21% 73.88%);
+  --c-grey: hsl(0, 0%, 49%);
+  --c-brown-sm: hsl(0, 1%, 38%);
   --c-white: hsl(33, 60%, 97%);
   --c-black: hsl(192, 11%, 9%);
+  --c-circle-btn-bg: rgba(0, 0, 0, .5);
+  --c-title-bg: rgba(0, 0, 0, .8);
+  --c-card-active-bg: hsl(31.87deg 39.03% 14.6%);
+  --c-dark-lg: hsl(222, 47%, 11%);
+  --c-dark-md: hsl(217, 33%, 17%);
+  --c-dark-sm: hsl(215, 25%, 27%);
+  --c-dark: hsl(220, 21%, 19%);
+  --c-red: hsl(12, 74%, 56%);
   --c-red-lg: hsl(0, 45%, 42%);
+  --c-neon: hsl(135, 73%, 54%);
   --bg-main: url('./Assets/groceryBG3.png');
+  --card-default-bg: url('./Assets/background68.png');
+  --text-shadow: 0px 4px 3px rgb(0 0 0 / 40%), 0px 8px 13px rgb(0 0 0 / 10%), 0px 18px 23px rgb(0 0 0 / 10%);
 }
 
-*, *::before, *::after {
+*, 
+*::before, 
+*::after {
   box-sizing: border-box;
 }
 
@@ -24,4 +41,24 @@ body {
 body {
   margin: 0;
   padding: 0;
+}
+/* ------------ScrollBar---------------------> */
+::-webkit-scrollbar {
+  width: 6px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+  background: #2B4865;
+
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  border-radius: 100px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
