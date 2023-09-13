@@ -1,7 +1,7 @@
 # MEAL-PLANER-PRO
 
 
-[Live Demo](https://gilded-bavarois-ce9ea9.netlify.app/) | [GitHub Repository](https://github.com/Alike73/RECIPE-RADAR-PRO)
+[Live Demo](https://neon-griffin-e5594c.netlify.app/) | [GitHub Repository](https://github.com/Alike73/MEAL-PLANER-PRO)
 
 <img src="./src/Assets/folderIcon.png" alt="Recipe Radar Pro Logo" width="150">
 
