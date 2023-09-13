@@ -14,7 +14,7 @@
 }
 
 /* ---Main-Title-Style--- */
-h1 {
+.my_title {
   margin-bottom: 3rem;
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(28px, calc(var(--size)*6.7), 160px);
@@ -25,6 +25,37 @@ h1 {
   -webkit-text-fill-color: transparent;
   text-shadow: var(--text-shadow);
 }
+
+.slide-in-left {
+	-webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 /* ---Add-Meal-Plan-Btn-Style--- */
 .Btn {
@@ -118,6 +149,38 @@ h1 {
   border-radius: 1rem;
   box-shadow: -12px 11px 1px var(--c-grey);
 }
+/* ---Image-Animation--- */
+.tilt-in-bottom-1 {
+	-webkit-animation: tilt-in-bottom-1 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: tilt-in-bottom-1 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes tilt-in-bottom-1 {
+  0% {
+    -webkit-transform: rotateY(30deg) translateY(300px) skewY(-30deg);
+            transform: rotateY(30deg) translateY(300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+            transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt-in-bottom-1 {
+  0% {
+    -webkit-transform: rotateY(30deg) translateY(300px) skewY(-30deg);
+            transform: rotateY(30deg) translateY(300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+            transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+
+/* --------------------- */
 .transform-border:after {
   content: "";
   position: absolute;

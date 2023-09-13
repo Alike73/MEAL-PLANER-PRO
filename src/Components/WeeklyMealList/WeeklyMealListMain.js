@@ -4,6 +4,7 @@ import { getActiveTab, getSelectedDay, setSelectedDay } from "../../Redux/MealSl
 import BreakfastMeal from "./BreakfastMeal";
 import LunchMeal from "./LunchMeal";
 import DinnerMeal from "./DinnerMeal";
+import { useEffect, useState } from "react";
 
 
 const WeeklyMealListMain = ({ addMeal, mealPlans, deleteDay, scrollToBottom, selectedDayRef }) => {
@@ -11,10 +12,20 @@ const WeeklyMealListMain = ({ addMeal, mealPlans, deleteDay, scrollToBottom, sel
   const activeTab = useSelector(getActiveTab);
   const selectedDay = useSelector(getSelectedDay);
   const dispatch = useDispatch();
+  const [animateTitle, setAnimateTitle] = useState(true);
+
+  useEffect(() => {
+    // After a short delay (e.g., 500ms), remove the animation class
+    const animationTimeout = setTimeout(() => {
+      setAnimateTitle(false);
+    }, 500);
+
+    return () => clearTimeout(animationTimeout);
+  }, []);
 
   return (
     <div className="col-lg-7 text-center text-lg-start">
-      <h1>
+      <h1 className={`my_title ${animateTitle ? "slide-in-left" : ""}`}>
         Meal Planer
       </h1>
       <button 
